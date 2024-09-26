@@ -36,8 +36,8 @@
 *butterfly*  
 *Ex:* Die Raupe wurde zu einem wunderschönen **Schmetterling**. (The caterpillar turned into a beautiful butterfly.)
 
-**schneiden**
-*cut sth*
+**schneiden**  
+*cut sth*  
 Ich **schnitt** das Fleisch in Würfel. (I cut the meat into cubes.)
 
 
