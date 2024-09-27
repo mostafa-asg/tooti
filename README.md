@@ -5,7 +5,7 @@
 
 |          |          |          |          |          |          |          |          |          |          |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| [Set1](https://github.com/mostafa-asg/tooti/blob/main/languages/de/set1.md)   |      |      |      |      |      |      |      |      |      |
+| [Set1](https://github.com/mostafa-asg/tooti/blob/main/languages/de/set1.md)   |[Set2](https://github.com/mostafa-asg/tooti/blob/main/languages/de/set2.md)      |      |      |      |      |      |      |      |      |
 |     |      |      |      |      |      |      |      |      |      |
 |     |      |      |      |      |      |      |      |      |      |
 |     |      |      |      |      |      |      |      |      |      |
