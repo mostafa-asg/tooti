@@ -57,7 +57,7 @@ class ContentParser:
                 continue
 
             if readState == ReadState.Examples:                
-                if line == "\n": # means there is no example, so the next item must be word declaration
+                if line.strip() == "\n" or line.strip() == "": # means there is no example, so the next item must be word declaration
                     readState = ReadState.WorldDeclaration
                     continue
 
