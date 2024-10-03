@@ -21,7 +21,7 @@
 
 **auftauchen**  
 *show up, pop up*  
-*Ex:* Der Seehund **tauchte** kurz auf, dann verschwand er im Wasser. (The seal popped up briefly, then disappeared into the water.) 
+*Ex:* Der Seehund **tauchte** kurz auf, dann verschwand er im Wasser. (The seal popped up briefly, then disappeared into the water.). 
 *Ex:* Er **taucht** immer uneingeladen auf, aber das macht mir nichts aus. (He always shows up uninvited, but I don't mind.)
 
 **verschwinden**  
