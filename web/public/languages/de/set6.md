@@ -38,7 +38,3 @@
 **die Einrichtung**  
 *facility*  
 *Ex:* Alle **Einrichtungen** des Hotels sind kostenfrei. (All facilities of the hotel are free of charge)
-
-
-
-

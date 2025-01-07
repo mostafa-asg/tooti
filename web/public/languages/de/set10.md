@@ -39,4 +39,3 @@
 **der Rucksack**  
 *backback*  
 *Ex:* Ich habe meinen **Rucksack** am Flughafen verloren. (I lost my backpack at the airport)
-

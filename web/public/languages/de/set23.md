@@ -41,4 +41,3 @@
 *convert, transfer*  
 *Ex:* Die Zellen **wandeln** Glukose in Energie um. (The cells convert glucose to energy)  
 *Ex:* Pflanzen **wandeln** Sonnenenergie in Zucker um. (Plants transform the energy of the sun into sugar)
-

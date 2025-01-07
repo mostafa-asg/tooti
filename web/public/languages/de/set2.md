@@ -39,7 +39,3 @@ Sie hängte ein Gemälde an die **Wand**. (She hung a painting on the wall.)
 **die Bestimmtheit**  
 *assertiveness*  
 *Ex:* Ihre **Bestimmtheit** bei der Arbeit ist ihre beste Eigenschaft. (Her assertiveness at work is her best feature.)
-
-
-
-

@@ -39,4 +39,3 @@
 **vorne**  
 *in the front*  
 *Ex:* Meine Schwester sitzt im Auto gerne **vorne**. (My sister likes to sit in the front of the car)  
-

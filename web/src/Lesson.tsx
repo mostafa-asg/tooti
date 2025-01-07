@@ -6,12 +6,9 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import "./App.css";
 import _ from "lodash";
+import { useParams } from 'react-router-dom';
 
-interface LessonProps {
-  fileName: string;
-}
-
-const Lesson: React.FC<LessonProps> = ({ fileName }) => {
+const Lesson: React.FC = () => {
   const [translations, setTranslations] = useState<Translation[]>([]);
   const [validWords, setValidWords] = useState<string[]>([]);
   const [userSelectedWords, setUserSelectedWords] = useState<string[]>([]);
@@ -22,6 +19,10 @@ const Lesson: React.FC<LessonProps> = ({ fileName }) => {
 
   const [countDown, setCountDown] = useState(0); // Use to start the next question
   const [gameOver, setGameOver] = useState(false);
+
+  const [loading, setLoading] = useState(true);
+  
+  const { "*": fileName } = useParams();
 
   useEffect(() => {
     let timer;
@@ -40,11 +41,6 @@ const Lesson: React.FC<LessonProps> = ({ fileName }) => {
   }, [countDown]);
 
   const loadNextQuestion = () => {
-    console.log("---------");
-    console.log(currentQuestionIndex);
-    console.log(totalQuestions - 1);
-    console.log("---------");
-
     if (currentQuestionIndex < totalQuestions - 1) {
       let index = currentQuestionIndex + 1;
       setCurrentQuestionIndex(index);
@@ -82,9 +78,12 @@ const Lesson: React.FC<LessonProps> = ({ fileName }) => {
   };
 
   useEffect(() => {
-    fetch(fileName)
+    const loadContent = async () => {
+      setLoading(true);
+
+      fetch("/languages/" + fileName)
       .then((response) => response.text())
-      .then((fileContent) => {
+      .then((fileContent) => {        
         let parser = new ContentParser(fileContent);
         let parseResult = parser.parse();
 
@@ -92,15 +91,23 @@ const Lesson: React.FC<LessonProps> = ({ fileName }) => {
           let questions = _.shuffle(parseResult.translations);
 
           setTranslations(questions);
-          setTotalQuestions(questions.length);
-          console.log(questions.length)
+          setTotalQuestions(questions.length);          
 
           setCurrentQuestionIndex(0);
           setValidWords(_.shuffle(questions[0].answerWords));
           setUserSelectedWords([]);
+          
+          setLoading(false);
         }
       });
+    }
+
+    loadContent();
   }, [fileName]);
+
+  if (loading) {
+    return <div><b>Loading ...</b></div>
+  }
 
   return translations.length > 0 ? (
     <div>

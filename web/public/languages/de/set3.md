@@ -40,4 +40,3 @@
 *fear, be afraid (v)*  
 *Ex:* Es besteht kein Grund, neue Herausforderungen zu **fürchten**. (There is no reason to fear new challenges.)  
 *Ex:* Ich **fürchte**, ich muss meine Buchung stornieren. (I am afraid I have to cancel my booking.)
-
