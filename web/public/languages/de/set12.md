@@ -40,4 +40,3 @@
 **sich benehmen**  
 *behave (v)*  
 *Ex:* Sie **benimmt sich** immer gut, wenn ihr Vater in der Nähe ist. (She always behaves well when her father is around)
-

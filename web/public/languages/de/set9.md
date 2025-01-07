@@ -43,8 +43,3 @@
 **anrufen**  
 *phone sb*  
 *Ex:* Ich habe meinen Freund **angerufen**, als ich angekommen bin. (I phoned my friend when I arrived)
-
-
-
-
-

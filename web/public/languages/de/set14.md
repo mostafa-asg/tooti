@@ -37,4 +37,3 @@
 **überholen**  
 *overtake*  
 *Ex:* Überprüfen Sie immer Ihren Rückspiegel, bevor Sie ein anderes Fahrzeug **überholen**. (Always check your rear-view mirror before you **overtake** another vehicle.)
-
