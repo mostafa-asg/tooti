@@ -51,9 +51,21 @@ const Lesson: React.FC = () => {
     }
   };
 
+  const removeWord = (words: string[], selectedWord: string): string[] => {
+    // Make a copy so as not to mutate the original array
+    const newWords = [...words];
+  
+    const index = newWords.indexOf(selectedWord);
+    if (index !== -1) {
+      newWords.splice(index, 1);
+    }
+  
+    return newWords;
+  };
+  
   const handleValidWordClick = (event) => {
     const selectedWord = event.target.textContent;
-    let words = validWords.filter((w) => w !== selectedWord);
+    let words = removeWord(validWords, selectedWord);    
     setValidWords(words);
     setUserSelectedWords((prevWords) => {
       let userAnswerArray = [...prevWords, selectedWord];
