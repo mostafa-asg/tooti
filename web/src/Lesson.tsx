@@ -92,7 +92,9 @@ const Lesson: React.FC = () => {
   useEffect(() => {
     const loadContent = async () => {
       setLoading(true);
-
+      console.log("-------");
+      console.log(fileName);
+      console.log("-------");
       fetch("/tooti/languages/" + fileName)
       .then((response) => response.text())
       .then((fileContent) => {        
