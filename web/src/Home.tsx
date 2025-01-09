@@ -59,7 +59,7 @@ const Home: React.FC = () => {
                 <CardActions>
                     <Button
                         component={Link}
-                        to={`/practice/languages/${lessonTitle}`} // Replace with your target route
+                        to={`/tooti/practice/languages/${lessonTitle}`} // Replace with your target route
                         variant="contained"
                         color="primary">
                         Practice    
