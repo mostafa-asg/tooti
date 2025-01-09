@@ -84,7 +84,7 @@ const Lesson: React.FC = () => {
 
   const handleUserWordClick = (event) => {
     const selectedWord = event.target.textContent;
-    let words = userSelectedWords.filter((w) => w !== selectedWord);
+    let words = removeWord(userSelectedWords, selectedWord);    
     setUserSelectedWords(words);
     setValidWords((prevWords) => [...prevWords, selectedWord]);
   };
