@@ -19,7 +19,7 @@ const Home: React.FC = () => {
     const loadWords = async () => {
         setLoading(true);
         for (let i = 1; i <= 25; i++) {
-            await fetch(`/languages/de/set${i}.md`)
+            await fetch(`/tooti/languages/de/set${i}.md`)
             .then((response) => response.text())
             .then((fileContent) => {
               
