@@ -37,4 +37,3 @@
 **die Furcht**  
 *fear, dread (n)*  
 *Ex:* Als er durch den dunklen Wald ging, überkam ihn **Furcht**. (Walking through the dark forest, he was filled with dread)  
-

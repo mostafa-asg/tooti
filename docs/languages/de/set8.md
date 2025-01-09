@@ -40,7 +40,3 @@
 *to prepare*  
 *Ex:* Haben Sie sich auf Ihr Vorstellungsgespräch **vorbereitet**?  
 *Ex:* Ich muss mich auf den Test **vorbereiten**. (I need to get ready for the test)
-
-
-
-
