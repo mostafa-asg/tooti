@@ -93,7 +93,7 @@ const Lesson: React.FC = () => {
     const loadContent = async () => {
       setLoading(true);
 
-      fetch("/languages/" + fileName)
+      fetch("/tooti/languages/" + fileName)
       .then((response) => response.text())
       .then((fileContent) => {        
         let parser = new ContentParser(fileContent);
