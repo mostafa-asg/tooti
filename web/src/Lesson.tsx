@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 import "./App.css";
 import _ from "lodash";
 import { useParams } from "react-router-dom";
+import ScoreBadges from "./ScoreBadges";
 
 const Lesson: React.FC = () => {
   const [translations, setTranslations] = useState<Translation[]>([]);
@@ -19,6 +20,10 @@ const Lesson: React.FC = () => {
 
   const [countDown, setCountDown] = useState(0); // Use to start the next question
   const [gameOver, setGameOver] = useState(false);
+
+  const [answeredCorrectly, setAnsweredCorrectly] = useState(0);
+  const [answeredWrongly, setAnsweredWrongly] = useState(0);
+
 
   const [loading, setLoading] = useState(true);
 
@@ -73,17 +78,18 @@ const Lesson: React.FC = () => {
     setUserSelectedWords((prevWords) => {
       let userAnswerArray = [...prevWords, selectedWord];
 
-      if (
-        words.length === 0 &&
-        _.isEqual(
+      if (words.length === 0) {
+        if (_.isEqual(
           userAnswerArray,
           translations[currentQuestionIndex].answerWords
-        )
-      ) {
-        setAnswerIsCorrect(true);
-        setCountDown(3);
+        )) {
+          setAnswerIsCorrect(true);
+          setAnsweredCorrectly(prev => prev+1)
+          setCountDown(3);  
+        } else {
+          setAnsweredWrongly(prev => prev+1)
+        }
       }
-
       return userAnswerArray;
     });
   };
@@ -98,9 +104,6 @@ const Lesson: React.FC = () => {
   useEffect(() => {
     const loadContent = async () => {
       setLoading(true);
-      console.log("-------");
-      console.log(fileName);
-      console.log("-------");
       fetch("/tooti/languages/" + fileName)
         .then((response) => response.text())
         .then((fileContent) => {
@@ -135,6 +138,7 @@ const Lesson: React.FC = () => {
 
   return translations.length > 0 ? (
     <div>
+      <ScoreBadges correctCount={answeredCorrectly} wrongCount={answeredWrongly} />
       {gameOver ? (
         <p>You studied all questions. Thanks for playing!</p>
       ) : (

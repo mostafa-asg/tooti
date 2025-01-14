@@ -1,0 +1,39 @@
+.score-badges-container {
+    position: fixed;       /* Make sure badges are fixed and won't scroll away */
+    top: 20px;            /* Distance from the top */
+    left: 20px;           /* Distance from the left */
+    display: flex;        /* Keep the two badges side by side */
+    gap: 10px;            /* A little space between the two badges */
+    z-index: 9999;        /* Make sure they appear on top of other elements */
+  }
+  
+  .score-badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;    /* Make it a circle */
+    display: flex;         /* Center the text horizontally and vertically */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;     /* Make the number visible enough */
+    color: #fff;           /* White text color for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    cursor: default;       /* Cursor doesn’t change, since these aren’t clickable (if you plan to make them clickable, remove this) */
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+  
+  .score-badge:hover {
+    transform: scale(1.1); /* A fun little effect on hover */
+  }
+  
+  .green-badge {
+    background-color: #1abc9c; /* A nice green color */
+  }
+  
+  .red-badge {
+    background-color: #e74c3c; /* A nice red color */
+  }
+  
+  .score-value {
+    pointer-events: none; /* Don’t allow the text to catch pointer events */
+  }  
