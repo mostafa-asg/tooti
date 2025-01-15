@@ -13,13 +13,17 @@
 
 
 ## Interactive exercises
-### Setup
+### Practice translation
+### Web version
+[https://mostafa-asg.github.io/tooti/](https://mostafa-asg.github.io/tooti/)  
+Source code is available in the `web` folder.
+
+### Terminal version
 ```Bash
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
-### Practice translation
 To practice translation from english to german run:
 ```Bash
 python3 practice_translation.py -f languages/de/set7.md
