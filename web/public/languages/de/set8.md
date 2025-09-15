@@ -13,7 +13,9 @@
 **erschrecken**  
 *to frighten, scare*  
 *Ex:* Der bellende Hund **erschreckte** das Kind. (The barking dog frightened the child)
-*Ex:* Das plötzliche Geräusch an der Tür hat mich **erschreckt**. (The sudden noise at the door spooked me)
+*Ex:* Das plötzliche Geräusch an der Tür hat mich **erschreckt**. (The sudden noise at the door spooked me)  
+*Ex:* Du hast mich **erschreckt**. (You scared me)  
+*Ex:* Ich wollte dich **erschrecken**. (I wanted to scare you)  
 
 **aufwachen**  
 *wake up*  
@@ -40,3 +42,7 @@
 *to prepare*  
 *Ex:* Haben Sie sich auf Ihr Vorstellungsgespräch **vorbereitet**?  
 *Ex:* Ich muss mich auf den Test **vorbereiten**. (I need to get ready for the test)
+
+
+
+
