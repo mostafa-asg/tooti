@@ -1,5 +1,11 @@
 from typing import List
 
+class SimpleQuestionAnswer:
+    def __init__(self, question: str, answer: str, hint: str):
+        self.question = question
+        self.answer = answer        
+        self.hint = hint        
+
 class Translation:
     def __init__(self, question: str, answer: str, answer_words: List[str], hint: str):
         self.question = question

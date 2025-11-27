@@ -1,7 +1,7 @@
 import string
 import os
 from typing import List, Set, Dict
-from models import Translation, WordMeaning
+from models import Translation, WordMeaning, SimpleQuestionAnswer
 from enum import Enum
 
 class ReadState(Enum):
@@ -14,6 +14,7 @@ class ParseResult:
         # Set of all words to learn
         self.words = set()
         self.translations: List[Translation] = []
+        self.question_one_word_answer: List[SimpleQuestionAnswer] = []       
         self.wordMeanings: List[WordMeaning] = []
 
 class ContentParser:
@@ -62,12 +63,24 @@ class ContentParser:
                     continue
 
                 line = line.replace("*Ex:*", "")
+
+                l_2stars = line.find("**") # start of the target word
+                r_2starts = line.find("**", l_2stars+2) # end of the target word
+                if l_2stars > 0 and r_2starts > 0:
+                    target_word = line[l_2stars+2: r_2starts].strip()
+                    parse_result.question_one_word_answer.append(SimpleQuestionAnswer(
+                        question=line.replace(f"**{target_word}**", "_______"),
+                        answer=target_word,
+                        hint=target_word[0:1] # Show the first char as hint
+                    ))
+
                 line = line.replace("**", "")
-                rparenthesis = line.find("(") # start of translation
-                lparenthesis = line.find(")") # end of translation
-                if rparenthesis > 0 and lparenthesis > 0:
-                    question = line[rparenthesis+1: lparenthesis].strip()
-                    answer = line[0:rparenthesis].strip()
+
+                lparenthesis = line.find("(") # start of translation
+                rparenthesis = line.find(")") # end of translation
+                if lparenthesis > 0 and rparenthesis > 0:
+                    question = line[lparenthesis+1: rparenthesis].strip()
+                    answer = line[0:lparenthesis].strip()
                     hint_words = answer.split(" ")
                     hint = ""
                     answer_words: List[str] = [] # Like hint_words, but punctuation removed at the end of words
